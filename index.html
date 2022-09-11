@@ -1,0 +1,67 @@
+<html>
+    <head>
+
+        <title>CRUD Application</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/index_style.css">
+
+    </head>
+    <body>
+
+        <h1 class="text-center text-info py-4">CRUD Application</h1>
+
+        <div class="w-75 mx-auto text-info mb-5">
+
+           <label class="form-lable">Product Name</label>
+           <input type="text" class="form-control my-3 " id="pName" >
+            
+           <label class="form-lable">Product count</label>
+           <input type="text" class="form-control my-3 " id="pCount" >
+
+           <label class="form-lable">Product Price</label>
+           <input type="number" class="form-control  " id="pPrice" >
+
+           <label class="form-lable">Product Category</label>
+           <input type="text" class="form-control my-3" id="pCat" >
+
+           <label class="form-lable">Product Description</label>
+           <textarea type="text" class="form-control my-3" id="pDesc" ></textarea>
+
+            <div id="mainButton">
+
+                <button  onclick="addProduct()" class="btn btn-info text-white">Add Product</button>
+
+            </div>
+
+        </div>
+
+        <input onkeyup="searchProducts(this.value)" class="form-control w-50 m-auto" placeholder="Search Product">
+
+        <table class="table w-75 mx-auto my-5 text-center">
+
+            <thead class="text-info">
+                <th>index</th>
+                <th>Name</th>
+                <th>Count</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th  class=" text-danger "  >increase</th>
+                <th class=" text-danger " >decrease</th>
+                <th class="text-warning"> Update Product</th>
+                <th class="text-danger"> Delete Product</th>
+                
+            </thead>
+
+            <tbody id="tbody" >
+    
+            </tbody>
+
+        </table>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/mine.js"></script>
+    </body>
+</html>
